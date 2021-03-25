@@ -30,16 +30,25 @@ WallTime: 72ms
 Failures: 0
 Branches: 0
 
+
+
+ICI c'est comment on fait sur la terminal
+
+
+
 export SPARK_HOME=/Users/chenzhihan/spark
 export PATH="$SPARK_HOME/bin:$PATH"
 export DOTNET_WORKER_DIR=/Users/chenzhihan/sparkworker/Microsoft.Spark.Worker-1.0.0 
 
-dotnet new console -o MySparkApp
+dotnet new console -o ESGF
 
-cd MySparkApp
+dotnet add package Microsoft.Spark
+dotnet add package Google.OrTools
+
+cd ESGF
 
 
-APRES RENTRER DANS LE FICHIER /Users/yassineik/MySparkApp/Program.cs
+APRES RENTRER DANS LE FICHIER /Users/chenzhihan/ESGF/Program.cs
 
 REMPLACER LE CONTENU PAR :
 
@@ -190,13 +199,6 @@ ENREGISTRER
 
 QUITTER
 
-CREER UN FICHIER INPUT.TXT DANS MySpark
-
-AJOUTER CA DEDANS :
-
-Hello World
-This .NET app uses .NET for Apache Spark
-This .NET app counts words with Apache Spark
 
 
 EXECUTER :
