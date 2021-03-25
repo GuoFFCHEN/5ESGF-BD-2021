@@ -37,13 +37,18 @@ ICI c'est comment on fait sur la terminal
 
 
 export SPARK_HOME=/Users/chenzhihan/spark
+
 export PATH="$SPARK_HOME/bin:$PATH"
+
 export DOTNET_WORKER_DIR=/Users/chenzhihan/sparkworker/Microsoft.Spark.Worker-1.0.0 
+
 
 dotnet new console -o ESGF
 
 dotnet add package Microsoft.Spark
+
 dotnet add package Google.OrTools
+
 
 cd ESGF
 
