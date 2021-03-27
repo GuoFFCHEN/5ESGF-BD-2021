@@ -4,8 +4,8 @@ On a passé beaucoup de temps pour essayer de faire le projet car on a jamais fa
 
 On a essayé plusieur fois de faire avec spark mais malheureusement mais on n'a pas réussi. On a fait tourner le programme sur Visual Studio mais on en parvient pas à le faire tourner sous spark
 
-Dans le dossier Groupe-7, nous avons utilisé l'outil or-tools pour résoudre le problème de sudoku, nous avons testé le programme avec un sudoku prédéfinis  en matrice 9X9 et nous avons réussi. Par la suite dans le dossier myspark_app, nous essayons de se connecter au serveur de Spark pour lire les données de sudoku dans le fichier soduko_easy50.txt en sauvegardant chaque ligne  dans un Dataframe.
-et nous avons choissi la première ligne pour le test。
+Dans le dossier Groupe-7, nous avons utilisé l'outil or-tools pour résoudre le problème de sudoku, nous avons testé le programme avec un sudoku prédéfinis  en matrice 9X9 et nous avons réussi. Par la suite dans le dossier MySparkApp, nous essayons de se connecter au serveur de Spark pour lire les données de sudoku dans le fichier soduko_easy50.txt en sauvegardant chaque ligne  dans un Dataframe.
+et nous avons choissi la première ligne pour le test.
 
 nous avons réussi a faire tourner les 2 progammes séparement, mais quand nous les réunissions nous avons des erreurs, et nous ne savons pas quelle est la source de ce problème.
 
