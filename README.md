@@ -68,6 +68,11 @@ quand on changer la data,le resulta comme ca:
 
 3 4 9 5 7 1 8 2 6
 
+Solutions: 1
+WallTime: 93ms
+Failures: 1
+Branches: 2
+
 3eme essaye:
 
 6 3 9 2 1 8 4 5 7
@@ -89,10 +94,7 @@ quand on changer la data,le resulta comme ca:
 9 4 7 1 6 2 5 8 3
 
 
-Solutions: 1
-WallTime: 93ms
-Failures: 1
-Branches: 2
+
 Solutions: 1
 WallTime: 95ms
 Failures: 21
