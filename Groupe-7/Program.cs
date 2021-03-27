@@ -12,6 +12,7 @@ using Google.OrTools.ConstraintSolver;
 * BIN JIANG
 * XIANGXIN HU
 * HEDI KHLIFA
+*
 */
 
 
@@ -21,7 +22,7 @@ public class Sudoku
 
     /**
      *
-     * Resoudre le probleme de SUDUKO 
+     * Resoudre le probleme de SUDUKO
      *
      */
     private static void Solve()
