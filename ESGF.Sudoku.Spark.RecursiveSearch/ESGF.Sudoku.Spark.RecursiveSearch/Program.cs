@@ -27,6 +27,52 @@ public class Sudoku
      * Resoudre le probleme de SUDUKO
      *
      */
+     private static int[,] get_data()
+
+        {
+
+            SparkSession spark =
+                SparkSession
+                    .Builder()
+                    .AppName("get_data")
+                    .GetOrCreate();
+
+            // Create initial DataFrame
+            string filePath = @"/Users/hu/MySparkApp/input.txt";
+            //string filePath = args[0];
+            Console.WriteLine($"chemin du fichier : {filePath}"); //chemin du fichier : C:\Users\vadaz\Documents\BIG_DATA\05\Big_Data_C_Computing\TP_Spark\MySparkApp\input.txt
+            DataFrame dataFrame = spark.Read().Text(filePath);
+            DataFrame soduko = dataFrame.Limit(1);
+            var soduko_str = soduko.ToString();
+            //soduko_str.Show();
+            spark.Stop();
+            var rowstr = soduko_str;
+            var initial_grid = new int[9, 9];//二维矩阵
+            var colindex = 0;//列循环变量;
+            var rowindex = 0;//行循环变量；
+            foreach (var c in rowstr)
+            {
+                if (colindex >= 9)
+                {
+                    colindex = 0;
+                    rowindex++;
+                }
+                if (rowindex >= 9)
+                {
+                    rowindex = 0;
+                }
+                initial_grid[rowindex, colindex] = int.Parse(c.ToString());
+                colindex++;
+            }
+            return initial_grid;
+
+        }
+
+            
+
+        
+
+
     private static void Solve()
     {
         Solver solver = new Solver("Sudoku");
@@ -39,42 +85,7 @@ public class Sudoku
         int n = cell_size * cell_size;
         IEnumerable<int> RANGE = Enumerable.Range(0, n);
 
-	    SparkSession spark =
-            SparkSession
-                .Builder()
-                .AppName("get_data")
-                .GetOrCreate();
-
-        // Create initial DataFrame
-        string filePath = @"/Users/hu/MySparkApp/input.txt";
-        //string filePath = args[0];
-        Console.WriteLine($"chemin du fichier : {filePath}"); //chemin du fichier : C:\Users\vadaz\Documents\BIG_DATA\05\Big_Data_C_Computing\TP_Spark\MySparkApp\input.txt
-        DataFrame dataFrame = spark.Read().Text(filePath);
-        DataFrame soduko = dataFrame.Limit(1);
-        var soduko_str = soduko.ToString();
-        //soduko_str.Show();
-        spark.Stop();
-
-	    var rowstr = soduko_str;
-        var initial_grid = new int[9, 9];//二维矩阵
-        var colindex = 0;//列循环变量;
-        var rowindex = 0;//行循环变量；
-        foreach (var c in rowstr)
-        {
-            if (colindex >= 9)
-            {
-                colindex = 0;
-                rowindex++;
-            }
-            if (rowindex >= 9)
-            {
-                rowindex = 0;
-            }
-            initial_grid[rowindex, colindex] = int.Parse(c.ToString());
-            colindex++;
-        }
-
-
+        int[,] initial_grid = get_data();
 
         //
         // Decision variables
