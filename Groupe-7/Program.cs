@@ -6,9 +6,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using Google.OrTools.ConstraintSolver;
 
-using Microsoft.Spark.Sql;
-using Microsoft.Spark.Sql.Streaming;
-using static Microsoft.Spark.Sql.Functions;
+
 
 /*
 * Groupe 7
