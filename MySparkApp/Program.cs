@@ -31,26 +31,6 @@ namespace MySparkApp
             DataFrame dataFrame = spark.Read().Text(filePath);
             DataFrame soduko = dataFrame.Limit(1);
             soduko.Show();
-            spark.Udf().Register<string, string>(
-                "SukoduUDF",
-                (sudoku) => Sudokusolution(sudoku));
-
-
-            soduko.CreateOrReplaceTempView("Resolved");
-            DataFrame sqlDf = spark.Sql("SELECT Sudokus, SukoduUDF(Sudokus) as Resolution from Resolved");
-            sqlDf.Show();
-
-
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine($"Execution Time for " + nrows + " sudoku resolution with " + cores + " core and " + nodes + " instance: " + watch2.ElapsedMilliseconds + " ms");
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-
             spark.Stop();
         }
 
