@@ -135,25 +135,7 @@ public class Sudoku
 
     public static void Main(String[] args)
     {
-        //Func<Column, Column> udfArray = Udf<string, string[]>((str) => new string[] { str, $"{str} {str.Length}" });
-        //string hostname = "localhost";
-        //int port = 9999;
-        //SparkSession spark = SparkSession
-        //    .Builder()
-        //    .AppName("Streaming example with a UDF")
-        //    .GetOrCreate();
-        //DataFrame lines = spark
-        //    .ReadStream()
-        //    .Format("socket")
-        //    .Option("host", hostname)
-        //    .Option("port", port)
-        //    .Load();
 
-        //DataFrame arrayDF = lines.Select(Explode(udfArray(lines["value"])));
-        //StreamingQuery query = arrayDF
-        //    .WriteStream()
-        //    .Format("console")
-        //    .Start();
         Solve();
     }
 }

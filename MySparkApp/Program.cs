@@ -30,7 +30,8 @@ namespace MySparkApp
             Console.WriteLine($"chemin du fichier : {filePath}"); //chemin du fichier : C:\Users\vadaz\Documents\BIG_DATA\05\Big_Data_C_Computing\TP_Spark\MySparkApp\input.txt
             DataFrame dataFrame = spark.Read().Text(filePath);
             DataFrame soduko = dataFrame.Limit(1);
-            soduko.Show();
+            var soduko_str = soduko.ToString();
+            soduko_str.Show();
             spark.Stop();
         }
 
