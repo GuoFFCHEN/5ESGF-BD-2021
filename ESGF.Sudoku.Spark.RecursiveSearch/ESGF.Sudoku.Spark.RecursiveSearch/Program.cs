@@ -47,9 +47,9 @@ public class Sudoku
             //soduko_str.Show();
             spark.Stop();
             var rowstr = soduko_str;
-            var initial_grid = new int[9, 9];//二维矩阵
-            var colindex = 0;//列循环变量;
-            var rowindex = 0;//行循环变量；
+            var initial_grid = new int[9, 9];//creer une matrix;
+            var colindex = 0;//boucle pour la colonne;
+            var rowindex = 0;//boucle pour la rang;
             foreach (var c in rowstr)
             {
                 if (colindex >= 9)
@@ -65,12 +65,14 @@ public class Sudoku
                 colindex++;
             }
             return initial_grid;
+            //ici on obetenir la matrix de soduko;
+            //on passer la matrix ;
 
         }
 
-            
 
-        
+
+
 
 
     private static void Solve()
@@ -86,6 +88,18 @@ public class Sudoku
         IEnumerable<int> RANGE = Enumerable.Range(0, n);
 
         int[,] initial_grid = get_data();
+        //ou on peut juste specifique une  matrix
+        // 0 Représente les inconnus du problème
+        //int[,] initial_grid = {{0, 6, 0, 0, 5, 0, 0, 2, 0},
+        //                   {0, 0, 0, 3, 0, 0, 0, 9, 0},
+        //                   {7, 0, 0, 6, 0, 0, 0, 1, 0},
+        //                   {0, 0, 6, 0, 3, 0, 4, 0, 0},
+        //                   {0, 0, 4, 0, 7, 0, 1, 0, 0},
+        //                   {0, 0, 5, 0, 9, 0, 8, 0, 0},
+        //                   {0, 4, 0, 0, 0, 1, 0, 0, 6},
+        //                   {0, 3, 0, 0, 0, 8, 0, 0, 0},
+        //                   {0, 2, 0, 0, 4, 0, 0, 5, 0}};
+
 
         //
         // Decision variables
