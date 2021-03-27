@@ -50,7 +50,7 @@ Branches: 0
 
 quand on changer la data,le resulta comme ca:
 
-1 7 6 9 2 3 5 8 4
+1 7 6 9 2 3 5 8 4 \t
 5 2 4 8 1 7 6 3 9
 8 9 3 6 5 4 2 7 1
 9 5 7 3 4 8 1 6 2
