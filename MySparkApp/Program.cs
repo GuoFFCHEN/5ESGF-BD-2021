@@ -2,7 +2,12 @@ using Microsoft.Spark.Sql;
 using System;
 using System.Diagnostics;
 using static Microsoft.Spark.Sql.Functions;
-
+/*
+* CHEN ZHIHAN
+* JIANG BIN
+* HU XIANGXING
+* BEN HEDI KHALIFA
+*/
 namespace MySparkApp
 {
     class Program
