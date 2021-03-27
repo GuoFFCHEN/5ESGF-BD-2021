@@ -12,7 +12,9 @@ nous avons réussi a faire tourner les 2 progammes séparement, mais quand nous 
 Voici ce qu'on obtient:
 
 log4j:WARN No appenders could be found for logger (org.apache.spark.util.ShutdownHookManager).
+
 log4j:WARN Please initialize the log4j system properly.
+
 log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
 
 
