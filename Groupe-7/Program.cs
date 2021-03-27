@@ -25,13 +25,14 @@ public class Sudoku
 
     /**
      *
-     * Resoudre le probleme de SUDUKO 
+     * Resoudre le probleme de SUDUKO
      *
      */
     private static int[,] get_data()
 
     {
-        
+        //ici on peut pas obtenir la data viens la spark car la connection denied
+        //donc on utilise une ligne pour tester la fonction
         var soduko_str = "100920000524010000000000070050008102000000000402700090060000000000030945000071006";
         var rowstr = soduko_str;
         var initial_grid = new int[9, 9];//on creer une matrix
@@ -69,7 +70,7 @@ public class Sudoku
         // 0 Représente les inconnus du problème
         //ici on obtenir la donne viens la fonction get_data()
         int[,] initial_grid = get_data();
-        
+
         //ou on peut juste specifique une  matrix
         // 0 Représente les inconnus du problème
         //int[,] initial_grid = {{0, 6, 0, 0, 5, 0, 0, 2, 0},
@@ -163,7 +164,7 @@ public class Sudoku
         solver.EndSearch();
 
     }
-    
+
 
     public static void Main(String[] args)
     {

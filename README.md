@@ -47,6 +47,25 @@ WallTime: 72ms
 Failures: 0
 Branches: 0
 
+quand on changer la data,le resulta comme ca:
+4 8 3 9 2 1 6 5 7
+9 6 7 3 4 5 8 2 1
+2 5 1 8 7 6 4 9 3
+1 7 6 9 2 3 5 8 4
+5 2 4 8 1 7 6 3 9
+8 9 3 6 5 4 2 7 1
+9 5 7 3 4 8 1 6 2
+6 3 8 1 9 2 4 5 7
+4 1 2 7 6 5 3 9 8
+2 6 5 4 8 9 7 1 3
+7 8 1 2 3 6 9 4 5
+3 4 9 5 7 1 8 2 6
+
+
+Solutions: 1
+WallTime: 95ms
+Failures: 21
+
 
 
 Pour obtenir les données par spark on a utilisé les commande suivant dans la MySparkApp:
