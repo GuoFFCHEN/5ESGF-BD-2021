@@ -4,6 +4,8 @@ on a fait beaucoup de temps pour essayer de faire ça .car on a jamais fait ça 
 
 J'ai essayé plusieur fois de faire avec spark mais malheureusement je n'ai pas réussi ,je sais comment faire avec la function sans spark pour résoudre la soduko problem avec ortools,et qui est march bien,mais on sais pas comment utiliser la spark pour nous de faire ca.
 
+Dans le dossier Groupe-7, nous avons utilisé l'outil or-tools pour résoudre le problème de sudoku, nous avons testé le programme avec un sudoku prédéfinis  en matrice 9X9 et nous avons réussi. Par la suite dans le dossier myspark_app, nous essayons de se connecter au serveur de Spark pour lire les données de sudoku dans le fichier soduko_easy50.txt en sauvegardant chaque ligne  dans un Dataframe.
+
 la résulta est comme ca:
 
 8 6 1 4 5 9 7 2 3 
