@@ -4,8 +4,9 @@ On a passé beaucoup de temps pour essayer de faire le projet car on a jamais fa
 
 On a essayé plusieur fois de faire avec spark mais malheureusement mais on n'a pas réussi. On a fait tourner le programme sur Visual Studio mais on en parvient pas à le faire tourner sous spark
 
-Dans le dossier Groupe-7, nous avons utilisé l'outil or-tools pour résoudre le problème de sudoku, nous avons testé le programme avec un sudoku prédéfinis  en matrice 9X9 et nous avons réussi. Par la suite dans le dossier MySparkApp, nous essayons de se connecter au serveur de Spark pour lire les données de sudoku dans le fichier soduko_easy50.txt en sauvegardant chaque ligne  dans un Dataframe.
-et nous avons choissi la première ligne pour le test.
+Dans le dossier Groupe-7, nous avons utilisé l'outil or-tools pour résoudre le problème de sudoku, nous avons testé le programme avec un sudoku prédéfinis  en matrice 9X9 et nous avons réussi.
+
+Par la suite dans le dossier MySparkApp, nous essayons de se connecter au serveur de Spark pour lire les données de sudoku dans le fichier soduko_easy50.txt en sauvegardant chaque ligne  dans un Dataframe.et nous avons choissi la première ligne pour le test.
 
 nous avons réussi a faire tourner les 2 progammes séparement, mais quand nous les réunissions nous avons des erreurs, et nous ne savons pas quelle est la source de ce problème.
 
@@ -48,9 +49,7 @@ Failures: 0
 Branches: 0
 
 quand on changer la data,le resulta comme ca:
-4 8 3 9 2 1 6 5 7
-9 6 7 3 4 5 8 2 1
-2 5 1 8 7 6 4 9 3
+
 1 7 6 9 2 3 5 8 4
 5 2 4 8 1 7 6 3 9
 8 9 3 6 5 4 2 7 1
@@ -61,12 +60,28 @@ quand on changer la data,le resulta comme ca:
 7 8 1 2 3 6 9 4 5
 3 4 9 5 7 1 8 2 6
 
+3eme essaye:
 
+6 3 9 2 1 8 4 5 7
+4 7 1 5 3 9 2 6 8
+8 2 5 6 7 4 1 3 9
+5 6 4 8 2 3 7 9 1
+7 9 3 4 5 1 8 2 6
+2 1 8 7 9 6 3 4 5
+3 5 2 9 8 7 6 1 4
+1 8 6 3 4 5 9 7 2
+9 4 7 1 6 2 5 8 3
+
+
+Solutions: 1
+WallTime: 93ms
+Failures: 1
+Branches: 2
 Solutions: 1
 WallTime: 95ms
 Failures: 21
 
-
+ca marche bien!
 
 Pour obtenir les données par spark on a utilisé les commande suivant dans la MySparkApp:
 
