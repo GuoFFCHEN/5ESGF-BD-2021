@@ -6,13 +6,16 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using Google.OrTools.ConstraintSolver;
 
+using Microsoft.Spark.Sql;
+using Microsoft.Spark.Sql.Streaming;
+using static Microsoft.Spark.Sql.Functions;
+
 /*
 * Groupe 7
 * ZHIHAN CHEN
 * BIN JIANG
 * XIANGXIN HU
-* HEDI KHLIFA
-*
+* HEDI KHALIFA
 */
 
 
@@ -22,9 +25,36 @@ public class Sudoku
 
     /**
      *
-     * Resoudre le probleme de SUDUKO
+     * Resoudre le probleme de SUDUKO 
      *
      */
+    private static int[,] get_data()
+
+    {
+        
+        var soduko_str = "100920000524010000000000070050008102000000000402700090060000000000030945000071006";
+        var rowstr = soduko_str;
+        var initial_grid = new int[9, 9];//on creer une matrix
+        var colindex = 0;//boucle pour la colonne
+        var rowindex = 0;//boucle pour la liogne
+        foreach (var c in rowstr)
+        {
+            if (colindex >= 9)
+            {
+                colindex = 0;
+                rowindex++;
+            }
+            if (rowindex >= 9)
+            {
+                rowindex = 0;
+            }
+            initial_grid[rowindex, colindex] = int.Parse(c.ToString());
+            colindex++;
+        }
+        return initial_grid;
+
+    }
+    //ici on defini la solution
     private static void Solve()
     {
         Solver solver = new Solver("Sudoku");
@@ -36,17 +66,21 @@ public class Sudoku
         IEnumerable<int> CELL = Enumerable.Range(0, cell_size);
         int n = cell_size * cell_size;
         IEnumerable<int> RANGE = Enumerable.Range(0, n);
-
         // 0 Représente les inconnus du problème
-        int[,] initial_grid = {{0, 6, 0, 0, 5, 0, 0, 2, 0},
-                           {0, 0, 0, 3, 0, 0, 0, 9, 0},
-                           {7, 0, 0, 6, 0, 0, 0, 1, 0},
-                           {0, 0, 6, 0, 3, 0, 4, 0, 0},
-                           {0, 0, 4, 0, 7, 0, 1, 0, 0},
-                           {0, 0, 5, 0, 9, 0, 8, 0, 0},
-                           {0, 4, 0, 0, 0, 1, 0, 0, 6},
-                           {0, 3, 0, 0, 0, 8, 0, 0, 0},
-                           {0, 2, 0, 0, 4, 0, 0, 5, 0}};
+        //ici on obtenir la donne viens la fonction get_data()
+        int[,] initial_grid = get_data();
+        
+        //ou on peut juste specifique une  matrix
+        // 0 Représente les inconnus du problème
+        //int[,] initial_grid = {{0, 6, 0, 0, 5, 0, 0, 2, 0},
+        //                   {0, 0, 0, 3, 0, 0, 0, 9, 0},
+        //                   {7, 0, 0, 6, 0, 0, 0, 1, 0},
+        //                   {0, 0, 6, 0, 3, 0, 4, 0, 0},
+        //                   {0, 0, 4, 0, 7, 0, 1, 0, 0},
+        //                   {0, 0, 5, 0, 9, 0, 8, 0, 0},
+        //                   {0, 4, 0, 0, 0, 1, 0, 0, 6},
+        //                   {0, 3, 0, 0, 0, 8, 0, 0, 0},
+        //                   {0, 2, 0, 0, 4, 0, 0, 5, 0}};
 
 
         //
@@ -129,10 +163,11 @@ public class Sudoku
         solver.EndSearch();
 
     }
-
+    
 
     public static void Main(String[] args)
     {
+
         Solve();
     }
 }
