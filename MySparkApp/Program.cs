@@ -33,9 +33,9 @@ namespace MySparkApp
             var soduko_str = soduko.ToString();
             soduko_str.Show();
             spark.Stop();
+
         }
 
-        
 
 
 
