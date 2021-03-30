@@ -8,6 +8,7 @@ using static Microsoft.Spark.Sql.Functions;
 * HU XIANGXING
 * BEN HEDI KHALIFA
 */
+
 namespace MySparkApp
 {
     class Program
