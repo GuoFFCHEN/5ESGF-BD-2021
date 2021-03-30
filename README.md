@@ -22,7 +22,7 @@ log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more in
 
 
 
-#Voici le résultat obtenu par le programme group_7	:
+# Voici le résultat obtenu par le programme group_7	:
 
 8 6 1 4 5 9 7 2 3
 
@@ -48,7 +48,7 @@ WallTime: 72ms
 Failures: 0
 Branches: 0
 
-#quand on changer la data,le resulta comme ca:
+## quand on changer la data,le resulta comme ca:
 
 1 7 6 9 2 3 5 8 4
 
@@ -73,7 +73,7 @@ WallTime: 93ms
 Failures: 1
 Branches: 2
 
-#3eme essaye:
+## 3eme essaye:
 
 6 3 9 2 1 8 4 5 7
 
@@ -101,7 +101,7 @@ Failures: 21
 
 ca marche bien!
 
-#Pour obtenir les données par spark on a utilisé les commande suivant dans la MySparkApp:
+# Pour obtenir les données par spark on a utilisé les commande suivant dans la MySparkApp:
 
 
 ```
@@ -200,7 +200,7 @@ donet /Users/hu/ESGF.Sudoku.Spark.RecursiveSearch/bin/Debug/net5.0/ESGF.Sudoku.S
 
 
 
-#Nous avons procédez par un autre manière, voici le code:
+# Nous avons procédez par un autre manière, voici le code:
 ```
 using System;
 using System.Collections;
