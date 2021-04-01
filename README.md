@@ -81,7 +81,7 @@ private static int[,] get_data()
             // Create initial DataFrame
             string filePath = @"/Users/hu/MySparkApp/input.txt";
             //string filePath = args[0];
-            Console.WriteLine($"chemin du fichier : {filePath}"); //chemin du fichier : C:\Users\vadaz\Documents\BIG_DATA\05\Big_Data_C_Computing\TP_Spark\MySparkApp\input.txt
+            Console.WriteLine($"chemin du fichier : {filePath}"); 
             DataFrame dataFrame = spark.Read().Text(filePath);
             DataFrame soduko = dataFrame.Limit(1);
             var soduko_str = soduko.ToString();
