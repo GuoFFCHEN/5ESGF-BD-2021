@@ -1,10 +1,10 @@
-## Résolution de sudokus avec Google.OrTools-
+# Résolution de sudokus avec Google.OrTools-
 
 
 ***** Le code se trouve dans le Program.cs*****
 
 
-### 1- Introduction
+## 1- Introduction
 
 Nous sommes le groupe 7 chargé de résoudre le problème de sudoku avec l'outil Or-tools. Notre groupe est constitué de : chen zhihan, hu xiangxing,jiang bin et hedi khalifa.
 
@@ -15,7 +15,7 @@ On a passé beaucoup de temps pour essayer de faire le projet car on a jamais fa
 
 On a essayé plusieurs fois de faire avec spark mais malheureusement mais on n'a pas réussi. On a fait tourner le programme sur Visual Studio mais on en parvient pas à le faire tourner sous spark
 
-### 2- Lecture des données string sous spark et la mise en place de ces données en matrice 9x9.
+## 2- Lecture des données string sous spark et la mise en place de ces données en matrice 9x9.
 
 Dans le dossier MySparkApp:
 
@@ -52,7 +52,7 @@ namespace MySparkApp
             // Create initial DataFrame
             string filePath = @"/Users/hu/MySparkApp/input.txt";
             //string filePath = args[0];
-            Console.WriteLine($"chemin du fichier : {filePath}"); 
+            Console.WriteLine($"chemin du fichier : {filePath}");
             DataFrame dataFrame = spark.Read().Text(filePath);
             DataFrame soduko = dataFrame.Limit(1);
             var soduko_str = soduko.ToString();
@@ -111,7 +111,7 @@ private static int[,] get_data()
         }
 ```
 
-### 3- résolution de sudoku
+## 3- résolution de sudoku
 
 
 Par ailleurs, nous avons procéder à une résolution de sudoku grâce au outils or-tools dans le répertoire groupe_7, Voici le résultat obtenu par le programme group_7	:
@@ -140,7 +140,7 @@ WallTime: 72ms
 Failures: 0
 Branches: 0
 ```
-## quand on changer la data,le resulta comme ca:
+### quand on changer la data,le resulta comme ca:
 ```
 1 7 6 9 2 3 5 8 4
 
@@ -165,7 +165,7 @@ WallTime: 93ms
 Failures: 1
 Branches: 2
 ```
-## 3eme essaye:
+### 3eme essaye:
 ```
 6 3 9 2 1 8 4 5 7
 
@@ -193,7 +193,7 @@ Failures: 21
 ```
 ca marche bien!
 
-### 4- Réalisation du programme final et de son exécution，sur MacOS
+## 4- Réalisation du programme final et de son exécution，sur MacOS
 
 
 Dans le répertoire ESGF.Sudoku.Spark.RecursiveSearch, nous avons mis tout d'abord les codes qui permettent de récupérer les données string et de les transformer sous forme de matrice, ensuite on a intégré les codes qui utilisait l'outil Or-tools pour résoudre le sudoku. Ci-dessous se trouver les différent étapes réaliser pour l'exécution, en prenant note qu'il faut adapter le chemin de l'emplacement des fichiers.
@@ -215,7 +215,7 @@ donet /Users/hu/ESGF.Sudoku.Spark.RecursiveSearch/bin/Debug/net5.0/ESGF.Sudoku.S
 
 ```
 
-### 5- problème rencontré
+## 5- problème rencontré
 
 
 
