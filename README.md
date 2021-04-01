@@ -2,7 +2,9 @@
 
 
 ***** Le code se trouve dans le Program.cs*****
-
+------------------------------------------------------------
+### Groupe-7 ZHIHAN CHEN,BIN JIANG,XIANGXING HU,BEN HEDI KHALIFA
+------------------------------------------------------------
 
 ## 1- Introduction
 
